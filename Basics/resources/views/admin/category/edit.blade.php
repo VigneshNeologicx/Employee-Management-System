@@ -22,6 +22,7 @@
                       <input type="text" name="category_name"class="form-control" id="CategoryName" aria-describedby="CategoryName" placeholder="Enter Category Name"
                         value="{{$categories->category_name}}">
                     </div>
+
                     <button type="submit" class="btn btn-primary">Update Now</button>
                   </form>
                 </div>

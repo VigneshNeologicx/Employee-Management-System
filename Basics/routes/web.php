@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\CategoryController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,7 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.master-home');
 });
 
 Route::middleware([
@@ -26,9 +28,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        $users = User::all();
-        // $users = DB::table('users')->get();
-        return view('dashboard',compact('users'));
+         return view('admin.index');
     })->name('dashboard');
 });
 
@@ -45,12 +45,33 @@ Route::get('/about', function () {
 Route::get('/contact',[ContactController::class,'index'])->name('con');
 
 
-// Category Controller
+// Category Controller Routes
 
 Route::get('/category/all',[CategoryController::class,'AllCat'])->name('all.category');
 Route::post('/category/add',[CategoryController::class,'AddCat'])->name('store.category');
 
 Route::get('/category/edit/{id}',[CategoryController::class,'Edit']);
 Route::post('/category/update/{id}',[CategoryController::class,'Update']);
-// Route::delete('/category/delete/{id}',[CategoryController::class,'Delete']);
+Route::get('/softDelete/category/{id}',[CategoryController::class,'SoftDelete']);
+Route::get('/category/restore/{id}',[CategoryController::class,'Restore']);
+Route::get('/pdelete/category/{id}',[CategoryController::class,'PDelete']);
 
+// Brand Controller Routes
+
+Route::get('/brand/all',[BrandController::class,'AllBrand'])->name('all.brand');
+Route::post('/brand/add',[BrandController::class,'AddBrand'])->name('store.brand');
+Route::get('/brand/edit/{id}',[BrandController::class,'Edit']);
+Route::post('/brand/update/{id}',[BrandController::class,'Update']);
+Route::get('/brand/delete/{id}',[BrandController::class,'Delete']);
+
+// Multi pic Routes
+
+Route::get('/multi/image',[BrandController::class,'Multipic'])->name('multi.image');
+Route::post('/multi/add',[BrandController::class,'StoreImg'])->name('store.image');
+
+
+// Authentication Routes
+
+Route::get('/user/logout',[BrandController::class,'Logout'])->name('user.logout');
+
+//

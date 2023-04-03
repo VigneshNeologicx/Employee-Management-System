@@ -17,9 +17,17 @@
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('all.category') }}" :active="request()->routeIs('dashboard')">
-                          All Category
+                         Category
                     </x-jet-nav-link>
 
+                    <x-jet-nav-link href="{{ route('all.brand') }}" :active="request()->routeIs('dashboard')">
+                        Brand
+                    </x-jet-nav-link>
+
+
+                    <x-jet-nav-link href="{{ route('multi.image') }}" :active="request()->routeIs('dashboard')">
+                        Multi Image
+                    </x-jet-nav-link>
 
                 </div>
             </div>
