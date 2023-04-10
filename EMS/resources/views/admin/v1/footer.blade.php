@@ -1,16 +1,20 @@
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-center">
-            All Rights Reserved by Matrix-admin. Designed and Developed by
-            <a href="">WrapPixel</a>.
-          </footer>
-          <!-- ============================================================== -->
-          <!-- End footer -->
-          <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+
+
+
+
+</div>
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+    <footer class="footer text-center">
+        All Rights Reserved by Matrix-admin. Designed and Developed by
+        <a href="">WrapPixel</a>.
+    </footer>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
         <!-- ============================================================== -->
       </div>
       <!-- ============================================================== -->
@@ -19,7 +23,6 @@
       <!-- ============================================================== -->
       <!-- All Jquery -->
       <!-- ============================================================== -->
-      <script src="{{asset('backend/assets/libs/jquery/dist/jquery.min.js')}}"></script>
       <!-- Bootstrap tether Core JavaScript -->
       <script src="{{asset('backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{asset('backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
@@ -41,3 +44,20 @@
       <script src="{{asset('backend/assets/libs/flot/jquery.flot.crosshair.js')}}"></script>
       <script src="{{asset('backend/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
       <script src="{{asset('backend/dist/js/pages/chart/chart-page-init.js')}}"></script>
+
+
+      <!-- slimscrollbar scrollbar JavaScript -->
+      <script src="{{asset('backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
+      <script src="{{asset('backend/assets/extra-libs/sparkline/sparkline.js')}}"></script>
+
+
+      <!-- this page js -->
+      <script src="{{asset('backend/assets/extra-libs/multicheck/datatable-checkbox-init.js')}}"></script>
+      <script src="{{asset('backend/assets/extra-libs/multicheck/jquery.multicheck.js')}}"></script>
+      <script src="{{asset('backend/assets/extra-libs/DataTables/datatables.min.js')}}"></script>
+      <script>
+        /****************************************
+         *       Basic Table                   *
+         ****************************************/
+        // $("#zero_config").DataTable();
+      </script>

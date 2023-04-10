@@ -13,8 +13,9 @@
       name="description"
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <meta name="robots" content="noindex,nofollow" />
-    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <title>EMS </title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -22,6 +23,7 @@
       sizes="16x16"
       href="{{asset('backend/assets/images/favicon.png')}}"
     />
+
     <!-- Custom CSS -->
     <link href="{{asset('backend/assets/libs/flot/css/float-chart.css')}}" rel="stylesheet" />
     <!-- Custom CSS -->
@@ -32,4 +34,18 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')}}"></script>
     <![endif]-->
-  </head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{asset('backend/assets/extra-libs/multicheck/multicheck.css')}}"
+    />
+    <link
+      href="{{asset('backend/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.datatables.net/v/bs4/jq-3.6.0/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</head>

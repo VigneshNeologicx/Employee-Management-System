@@ -6,6 +6,9 @@ use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\DeptController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\AttendenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +22,8 @@ use App\Http\Controllers\BrandController;
 */
 
 Route::get('/', function () {
-    return view('layouts.master-home');
+    // return view('layouts.master-home');
+    return view('welcome');
 });
 
 Route::middleware([
@@ -74,4 +78,32 @@ Route::post('/multi/add',[BrandController::class,'StoreImg'])->name('store.image
 
 Route::get('/user/logout',[BrandController::class,'Logout'])->name('user.logout');
 
-//
+// Department Controller
+
+Route::get('/dept/list',[DeptController::class,'index'])->name('dept.list');
+Route::get('/dept/edit/{id}',[DeptController::class,'edit'])->name('dept.edit');
+Route::post('/dept/add',[DeptController::class,'add'])->name('dept.add');
+Route::get('/dept/delete/{id}',[DeptController::class,'destroy'])->name('dept.delete');
+
+
+// Employee Controller
+
+Route::get('/employee/add',[EmployeeController::class,'show_add_staff'])->name('add.staff');
+Route::post('/employee/add_staff',[EmployeeController::class,'add_emp'])->name('emp.add');
+Route::post('/employee/insert_role',[EmployeeController::class,'insert_role'])->name('insert.role');
+Route::post('/employee/insert_position',[EmployeeController::class,'insert_position'])->name('insert.position');
+
+Route::get('/employee/edit/{id}',[EmployeeController::class,'edit'])->name('emp.edit');
+
+Route::get('/employee/delete/{id}',[EmployeeController::class,'destroy'])->name('emp.delete');
+Route::get('/employee/create_role_pos',[EmployeeController::class,'add_role_pos'])->name('role.pos');
+
+
+Route::get('/delete/role/{id}',[EmployeeController::class,'role_delete'])->name('role.del');
+Route::get('/delete/position/{id}',[EmployeeController::class,'position_delete'])->name('position.del');
+
+
+
+// Attendence Controller
+
+Route::get('/attendence/list',[AttendenceController::class,'index'])->name('attendence.list');
