@@ -21,8 +21,6 @@ class CreateLocationsTable extends Migration
             $table->string('Address');
             $table->string('email');
             $table->timestamps();
-
-
         });
     }
     /**
