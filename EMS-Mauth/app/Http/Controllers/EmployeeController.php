@@ -177,18 +177,17 @@ public function position_delete($id)
         ]);
     }
 
-public function show_profile()
-{
-    $employee = Auth::guard('employee')->user()->id;
-    $emp= Employee::findOrFail($employee);
+    public function show_profile(Request $request)
+    {
+        $employee = $request->id();
+        $emp= Employee::findOrFail($employee);
 
-return response()->json([
-    'status' =>200,
-    'employee'=>$emp
-]);
+    return response()->json([
+        'status' =>200,
+        'employee'=>$emp
+    ]);
 
-}
-
+    }
 
 public function show_profile_view()
 {
