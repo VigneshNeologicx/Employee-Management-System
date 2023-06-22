@@ -65,7 +65,7 @@ Route::prefix('employee')->middleware('auth:employee')->group(function (){
     Route::get('/logout',[EmployeeAuthController::class,'logout_emp'])->name('logout.emp');
     Route::get('/leave-list',[EmployeeController::class,'leave-list'])->name('leave.list.emp');
     Route::post('/leave-request',[EmployeeController::class,'leave-request'])->name('leave.request.emp');
-    Route::get('/show-profile',[EmployeeController::class,'show_profile'])->name('show.profile.emp');
+    Route::post('/show-profile',[EmployeeController::class,'show_profile'])->name('show.profile.emp');
     Route::get('/show-profile-view',[EmployeeController::class,'show_profile_view'])->name('show.profile.emp.view');
 
     // Employee controller routes
