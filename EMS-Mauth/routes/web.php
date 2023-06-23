@@ -74,7 +74,7 @@ Route::prefix('employee')->middleware('auth:employee')->group(function (){
 
     Route::get('/employee/login',[EmployeeAuthController::class,'login_emp'])->name('login.emp');
     Route::post('/employee/login',[EmployeeAuthController::class,'login_verify_emp'])->name('login.verify.emp');
-    Route::get('/employee/register',[EmployeeAuthController::class,'register_emp'])->name('register.emp');
+   // Route::get('/employee/register',[EmployeeAuthController::class,'register_emp'])->name('register.emp');
     Route::post('/employee/register',[EmployeeAuthController::class,'register_submit_emp'])->name('register.submit.emp');
 
 // ********************* End Employee Routes ************************* /
