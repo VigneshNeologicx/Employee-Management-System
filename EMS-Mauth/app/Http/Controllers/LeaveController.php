@@ -30,8 +30,6 @@ class LeaveController extends Controller
                 'message'=> "Successfully added"
             ]);
         }
-
-
     }
 
 }
