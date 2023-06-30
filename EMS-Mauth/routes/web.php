@@ -89,3 +89,11 @@ Route::get('/dept/delete/{id}',[DeptController::class,'destroy'])->name('dept.de
 
 // ********************* End Department Routes ************************* /
 
+
+// ********************* Leave Routes ************************* /
+Route::get('/leave_list',[LeaveController::class,'leave_list'])->name('leave.list.emp');
+Route::post('/leave_request',[LeaveController::class,'leave_request'])->name('leave.request.emp');
+Route::post('/leave_status',[LeaveController::class,'leave_status'])->name('leave.status.emp');
+Route::post('/leave_rejected',[LeaveController::class,'leave_rejected'])->name('leave.rejected.emp');
+
+// ********************* End Leave Routes ************************* /
